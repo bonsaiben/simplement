@@ -8,4 +8,23 @@ Implementations are listed by category like on [The Ruby Toolbox](https://www.ru
 
 WARNING: Use the code provided here at your own risk. It is not guaranteed to work or even be safe. To that extent, this resource is intended for advanced users to find simple implementations which *might* be suitable for their needs, but which ultimately they alone are responsible for researching, discussing, and evaluating the suitability of the code for themselves. This is NOT intended for blind copy+paste into production by beginners.
 
+## Table of Contents
 
+- Active Record Default Values
+
+
+## Implementations
+
+### Active Record Default Values
+
+```ruby
+after_initialize :defaults, unless: :persisted?
+
+def defaults
+  self.number ||= 0.0
+end
+```
+
+Discussion: [http://stackoverflow.com/questions/328525/how-can-i-set-default-values-in-activerecord](http://stackoverflow.com/questions/328525/how-can-i-set-default-values-in-activerecord)
+
+Libraries: [https://www.ruby-toolbox.com/categories/Active_Record_Default_Values](https://www.ruby-toolbox.com/categories/Active_Record_Default_Values)
