@@ -10,7 +10,8 @@ WARNING: Use the code provided here at your own risk. It is not guaranteed to wo
 
 ## Table of Contents
 
-- Active Record Default Values
+- [Active Record Default Values](#active-record-default-values)
+- [Pagination](#pagination)
 
 
 ## Implementations
@@ -28,3 +29,15 @@ end
 Discussion: [http://stackoverflow.com/questions/328525/how-can-i-set-default-values-in-activerecord](http://stackoverflow.com/questions/328525/how-can-i-set-default-values-in-activerecord)
 
 Libraries: [https://www.ruby-toolbox.com/categories/Active_Record_Default_Values](https://www.ruby-toolbox.com/categories/Active_Record_Default_Values)
+
+### Pagination
+
+```ruby
+@page = params[:page] || 0
+@per_page = params[:per_page] || 20
+scope = Post.published
+@pages = scope.count / @per_page
+@posts = scope.offset(@per_page * @page).limit(@per_page)
+```
+
+Libraries: [https://www.ruby-toolbox.com/categories/pagination](https://www.ruby-toolbox.com/categories/pagination)
