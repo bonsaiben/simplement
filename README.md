@@ -12,6 +12,7 @@ WARNING: Use the code provided here at your own risk. It is not guaranteed to wo
 
 - [Active Record Default Values](#active-record-default-values)
 - [Pagination](#pagination)
+- [Permalinks and Slugs](#permalinks-and-slugs)
 
 
 ## Implementations
@@ -41,3 +42,19 @@ scope = Post.published
 ```
 
 Libraries: [kaminari](https://github.com/amatsuda/kaminari), [will_paginate](https://github.com/mislav/will_paginate), [more...](https://www.ruby-toolbox.com/categories/pagination)
+
+### Permalinks and Slugs
+
+```ruby
+class Post < ActiveRecord::Base
+  def to_param
+    [id, title.delete(?').parameterize].join(?-)
+  end
+end
+
+@post = Post.find(params[:id].to_s.split(?-).first)
+```
+
+Risks: dead links if you change the way permalinks/slugs are generated
+
+Libraries: [friendly_id](https://github.com/norman/friendly_id), [more...](https://www.ruby-toolbox.com/categories/rails_permalinks___slugs)
