@@ -28,7 +28,7 @@ end
 
 Discussion: [http://stackoverflow.com/questions/328525/how-can-i-set-default-values-in-activerecord](http://stackoverflow.com/questions/328525/how-can-i-set-default-values-in-activerecord)
 
-Libraries: [https://www.ruby-toolbox.com/categories/Active_Record_Default_Values](https://www.ruby-toolbox.com/categories/Active_Record_Default_Values)
+Libraries: [default_value_for](https://github.com/FooBarWidget/default_value_for), [more...](https://www.ruby-toolbox.com/categories/Active_Record_Default_Values)
 
 ### Pagination
 
@@ -40,4 +40,4 @@ scope = Post.published
 @posts = scope.offset(@per_page * @page).limit(@per_page)
 ```
 
-Libraries: [https://www.ruby-toolbox.com/categories/pagination](https://www.ruby-toolbox.com/categories/pagination)
+Libraries: [kaminari](https://github.com/amatsuda/kaminari), [will_paginate](https://github.com/mislav/will_paginate), [more...](https://www.ruby-toolbox.com/categories/pagination)
