@@ -8,6 +8,9 @@ Implementations are listed by category like on [The Ruby Toolbox](https://www.ru
 
 WARNING: Use the code provided here at your own risk. It is not guaranteed to work or even be safe. This project is intended for advanced users to find simple implementations that *might* be suitable for their needs, but which they alone are responsible for researching, discussing, and evaluating the suitability of the code for themselves. This is NOT intended for blind copy+paste into production by beginners.
 
+## Contributing
+
+Contributions are welcome (fork, branch, PR). Discussions are also welcome in [Issues](https://github.com/bonsaiben/simplement/issues). Right now implementations are mainly Ruby/Rails but I'm open to other language/framework implementations too.
 
 ## Table of Contents
 
