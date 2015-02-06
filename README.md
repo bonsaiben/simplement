@@ -17,6 +17,7 @@ Contributions are welcome (fork, branch, PR). Discussions are also welcome in [I
 - [Active Record Default Values](#active-record-default-values)
 - [Pagination](#pagination)
 - [Permalinks and Slugs](#permalinks-and-slugs)
+- [Bootstrap and FontAwesome](#bootstrap-fontawesome)
 
 
 ## Implementations
@@ -35,6 +36,7 @@ Discussion: [http://stackoverflow.com/questions/328525/how-can-i-set-default-val
 
 Libraries: [default_value_for](https://github.com/FooBarWidget/default_value_for), [more...](https://www.ruby-toolbox.com/categories/Active_Record_Default_Values)
 
+
 ### Pagination
 
 ```ruby
@@ -46,6 +48,7 @@ scope = Post.published
 ```
 
 Libraries: [kaminari](https://github.com/amatsuda/kaminari), [will_paginate](https://github.com/mislav/will_paginate), [more...](https://www.ruby-toolbox.com/categories/pagination)
+
 
 ### Permalinks and Slugs
 
@@ -59,6 +62,19 @@ end
 @post = Post.find(params[:id].to_s.split(?-).first)
 ```
 
-Risks: dead links if you change the way permalinks/slugs are generated
+Caveats: dead links if you later decide to change how slugs look
 
 Libraries: [friendly_id](https://github.com/norman/friendly_id), [more...](https://www.ruby-toolbox.com/categories/rails_permalinks___slugs)
+
+
+### Bootstrap and FontAwesome
+
+```html
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+```
+
+Caveats: requires network access
+
+Libraries: [bootstrap-sass](https://github.com/twbs/bootstrap-sass), [twitter-bootstrap-rails](https://github.com/seyhunak/twitter-bootstrap-rails), [font-awesome-rails](https://github.com/bokmann/font-awesome-rails), [font-awesome-sass](https://github.com/FortAwesome/font-awesome-sass)
